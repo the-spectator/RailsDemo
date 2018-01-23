@@ -25,10 +25,10 @@ class User < ApplicationRecord
   validates :gender,
     presence: true,
     inclusion: {
-      in: %w(M F O)
+      in: %w(M F O),
       message: "%{value} is not valid!"
     }
 
-  validates :dob, presence: true,
+  validates :dob, presence: true
 
 end

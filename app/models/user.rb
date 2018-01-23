@@ -30,5 +30,5 @@ class User < ApplicationRecord
     }
 
   validates :dob, presence: true
-
+  
 end

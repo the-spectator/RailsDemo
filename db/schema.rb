@@ -21,7 +21,7 @@ ActiveRecord::Schema.define(version: 20180123083812) do
     t.date "dob"
     t.string "mobile_number"
     t.string "email"
-    t.string "passoword"
+    t.string "password"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

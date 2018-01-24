@@ -47,4 +47,5 @@ class User < ApplicationRecord
   
   validates :dob, presence: true
   has_one :address
+  has_many :posts
 end

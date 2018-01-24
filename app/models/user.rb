@@ -28,7 +28,7 @@ class User < ApplicationRecord
       in: %w(M F O),
       message: "%{value} is not valid!"
     }
-
-  validates :dob, presence: true
   
+  validates :dob, presence: true
+  has_one :address
 end

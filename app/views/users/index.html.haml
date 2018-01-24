@@ -1,0 +1,15 @@
+%h1 Listing Users
+%p The List of user:
+%table
+  %tr
+    %th Name
+    %th Gender
+    %th EMail
+    %th DOB
+  - @list.each do |data|
+    %tr
+      %td= data.name
+      %td= data.gender
+      %td= data.email
+      %td= data.dob
+%p= format_time(Time.now)

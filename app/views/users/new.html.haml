@@ -3,7 +3,7 @@
   %h1 Signup form
   - if @user.errors.any?
     %h2
-      = Errors
+      Errors:
     %ul
     - @user.errors.full_messages.each do |msg|
       %li= msg

@@ -1,6 +1,10 @@
 class UsersController < ApplicationController
   def index
     @list = User.all
+    respond_to do |format|
+    	format.html
+    	format.json { render :json => @list.to_json }
+  	end
   end
 
   def new

@@ -1,15 +1,19 @@
 %h1 Listing Users
 %p The List of user:
-%table
+%table{:cellpadding => "10"}
   %tr
     %th Name
     %th Gender
     %th EMail
     %th DOB
+    %th Mobile Number
   - @list.each do |data|
     %tr
-      %td= data.name
+      %td= link_to data.name, user_path(data)
       %td= data.gender
       %td= data.email
       %td= data.dob
+      %td= data.mobile_number
+      //%td= link_to 'Delete', user_path(data), method: :delete, class: 'btn btn-primary'
+      %td= button_to 'Delete', { action: 'destroy', id: data.id }, :class => 'btn btn-warning', method: :delete, data: { confirm: "Are you sure?" }
 = link_to 'SignUP', 'users/new'

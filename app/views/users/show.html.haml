@@ -1,0 +1,13 @@
+%center
+  %h1 User Profile
+  %table{:cellpadding => "10"}
+    %tr
+      %th Name
+      %th Gender
+      %th EMail
+      %th DOB
+      %tr
+        %td= @user.name+" "+@user.last_name
+        %td= @user.gender
+        %td= @user.email
+        %td= @user.dob

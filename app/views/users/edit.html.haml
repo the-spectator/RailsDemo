@@ -1,0 +1,69 @@
+- provide(tile: 'Update')
+%center
+  %h1 Update Form
+  - if @user.errors.any?
+    %h2
+      Errors:
+    %ul
+    - @user.errors.full_messages.each do |msg|
+      %li= msg
+  = form_with model: @user, local: true, method: :put  do |form|
+    %table
+      %tr
+        %td
+          = form.label :name
+        %td
+          = form.text_field :name
+      %tr
+        %td
+          = form.label :last_name
+        %td
+          = form.text_field :last_name
+      %tr
+        %td
+          = form.label :email
+        %td
+          = form.text_field :email
+      %tr
+        %td
+          = form.label :mobile_number
+        %td
+          = form.text_field :mobile_number
+      %tr
+        %td
+          = form.label :gender
+      %tr
+        %td
+          = form.label :male
+        %td
+          = form.radio_button 'gender', 'M'
+      %tr
+        %td
+          = form.label :female
+        %td
+          = form.radio_button 'gender', 'F'
+      %tr
+        %td
+          = form.label :other
+        %td
+          = form.radio_button 'gender', 'O'
+      %tr
+        %td
+          = form.label :password
+        %td
+          = form.text_field :password
+      %tr
+        %td
+          = form.label :password_confirmation  
+        %td
+          = form.text_field :password_confirmation
+      %tr
+        %td
+          = form.label :dob
+        %td
+          = form.date_field 'dob'
+      %tr
+        %td
+        %td
+          = form.submit
+  = link_to 'Back', users_path

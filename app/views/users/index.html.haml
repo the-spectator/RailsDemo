@@ -16,4 +16,6 @@
       %td= data.mobile_number
       //%td= link_to 'Delete', user_path(data), method: :delete, class: 'btn btn-primary'
       %td= button_to 'Delete', { action: 'destroy', id: data.id }, :class => 'btn btn-warning', method: :delete, data: { confirm: "Are you sure?" }
+      //%td= link_to 'Edit', edit_user_path(data), method: :get
+      %td= button_to 'Update', { action: 'edit', id: data.id }, :class => 'btn btn-danger', method: :get, data: { confirm: "Are you sure?" }
 = link_to 'SignUP', 'users/new'

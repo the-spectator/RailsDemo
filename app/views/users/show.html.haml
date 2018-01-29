@@ -11,3 +11,5 @@
         %td= @user.gender
         %td= @user.email
         %td= @user.dob
+      %tr
+        %td= link_to 'Address', user_address_path(@user)
